@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Management System - Events</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+
+    .events-heading {
+      color: #343a40;
+      text-align: center;
+      font-size: 28px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    .card-body {
+      padding: 15px;
+    }
+
+    .card-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .card-text {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .btn-danger {
+      background-color: #dc3545;
+      border-color: #dc3545;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 class="events-heading">EVENTS</h2>
+  <div class="container text-center mb-4">
+    <button onclick="addEvent()" class="btn btn-primary">Add New Event</button>
+  </div>
+
+  <div class="container mt-4">
+    <div class="row" id="eventsContainer">
+      <!-- Diwali Event -->
+      <div class="col-md-4 mb-4">
+        <div class="card text-center">
+          <img src="./images/diwali.jpg" alt="Diwali">
+          <div class="card-body">
+            <h5 class="card-title">Diwali</h5>
+            <p class="card-text">Celebrate the joy of Diwali with lights and festivities.</p>
+            <button class="btn btn-danger delete-btn">Delete Event</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chaithra Event (Ugadi) -->
+      <div class="col-md-4 mb-4">
+        <div class="card text-center">
+          <img src="./images/ugadi.jpg" alt="Ugadi">
+          <div class="card-body">
+            <h5 class="card-title">Chaithra</h5>
+            <p class="card-text">Celebrate Ugadi with Chaithra, welcoming new beginnings, prosperity, and the sweetness of fresh hopes.</p>
+            <button class="btn btn-danger delete-btn">Delete Event</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vasista Event (Krishna Ashtami) -->
+      <div class="col-md-4 mb-4">
+        <div class="card text-center">
+          <img src="./images/vasista.jpg" alt="Krishna Ashtami">
+          <div class="card-body">
+            <h5 class="card-title">Vasista</h5>
+            <p class="card-text">This Krishna Ashtami, may Lord Krishna’s blessings guide you on the path of truth, love, and wisdom, Vasista.</p>
+            <button class="btn btn-danger delete-btn">Delete Event</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Teachers Day Event -->
+      <div class="col-md-4 mb-4">
+        <div class="card text-center">
+          <img src="./images/teachers.jpg" alt="Teachers Day">
+          <div class="card-body">
+            <h5 class="card-title">Teachers Day</h5>
+            <p class="card-text">On Teachers' Day, we honor the teachers who inspire, guide, and shape the future with their wisdom and dedication.</p>
+            <button class="btn btn-danger delete-btn">Delete Event</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ganesh Chaturthi Event -->
+      <div class="col-md-4 mb-4">
+        <div class="card text-center">
+          <img src="./images/vinayaka.jpg" alt="Ganesh Chaturthi">
+          <div class="card-body">
+            <h5 class="card-title">Ganesh Chaturthi</h5>
+            <p class="card-text">Celebrate the spirit of Ganesh Chaturthi with joy, as Lord Ganesha brings prosperity and happiness to your life!</p>
+            <button class="btn btn-danger delete-btn">Delete Event</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Independence Day Event -->
+      <div class="col-md-4 mb-4">
+        <div class="card text-center">
+          <img src="./images/independence.jpg" alt="Independence Day">
+          <div class="card-body">
+            <h5 class="card-title">Independence Day</h5>
+            <p class="card-text">On this Independence Day, let us honor the sacrifices of our heroes and cherish the freedom we hold dear.</p>
+            <button class="btn btn-danger delete-btn">Delete Event</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Abhiyant Event -->
+      <div class="col-md-4 mb-4">
+        <div class="card text-center">
+          <img src="./images/abhiyant.jpg" alt="Abhiyant">
+          <div class="card-body">
+            <h5 class="card-title">Abhiyant</h5>
+            <p class="card-text">May your journey as an Abhiyant be filled with success, and may you continue to inspire with your creativity and passion.</p>
+            <button class="btn btn-danger delete-btn">Delete Event</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Farewell Day Event -->
+      <div class="col-md-4 mb-4">
+        <div class="card text-center">
+          <img src="./images/farewell.jpg" alt="Farewell Day">
+          <div class="card-body">
+            <h5 class="card-title">Farewell Day</h5>
+            <p class="card-text">On this Farewell Day, we celebrate the memories we've created and the journeys we've shared together.</p>
+            <button class="btn btn-danger delete-btn">Delete Event</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Malelamma Jathara Event -->
+      <div class="col-md-4 mb-4">
+        <div class="card text-center">
+          <img src="./images/malelamma.jpg" alt="Malelamma Jathara">
+          <div class="card-body">
+            <h5 class="card-title">Malelamma Jathara</h5>
+            <p class="card-text">Malelamma Jathara celebrates the divine blessings of Malelamma, bringing together faith, culture, and devotion.</p>
+            <button class="btn btn-danger delete-btn">Delete Event</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div> <!-- End of eventsContainer -->
+
+<script>
+  // Event listener for delete buttons
+  document.querySelectorAll('.delete-btn').forEach(button => {
+    button.addEventListener('click', function() {
+      const eventCard = this.closest('.col-md-4');
+      eventCard.remove();
+    });
+  });
+</script>
+</body>
+</html>
+
+

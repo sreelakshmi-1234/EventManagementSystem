@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diwali Celebration</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Include your styles.css file -->
+  <!-- Bootstrap CSS (optional for grid layout and styling) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Apply background color to the entire page */
+    body {
+      background-color: #f0f8ff; /* Light cyan color for the background */
+      font-family: 'Arial', sans-serif; /* Set a clean font */
+      color: #333; /* Dark text color for better readability */
+    }
+
+    .video-section {
+      background-color: #f0f8ff; /* White background for the video section */
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    }
+
+    .video-card {
+      display: flex;
+      justify-content: center; /* Center align the video */
+      align-items: center;
+    }
+
+    video {
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Video shadow */
+      width: 90%;  /* Increased width to 90% */
+      height: 400px; /* Increased height */
+      object-fit: cover;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      background: linear-gradient(135deg, #FF7F50, #FF6347); /* Lighter gradient for a fresh look */
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for the navbar */
+    }
+
+    .navbar h1 {
+      color: white;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Text shadow for navbar title */
+    }
+
+    .navbar-nav .nav-link {
+      color: #fff; /* Light color for nav links */
+      font-weight: bold;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #FF6347; /* Lighter color for hover effect */
+    }
+
+    .card-title {
+      color: #FF4500; /* Orange color for the titles */
+    }
+
+    .btn-success {
+      background-color: #FF4500;
+      border: none;
+    }
+
+    .btn-success:hover {
+      background-color: #FF7F50;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <h1 style="color: white; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);">Welcome to Diwali Celebration - RK Valley Campus</h1>
+      <div class="navbar-nav ms-auto">
+        <a href="Events.html" class="btn btn-success">Back</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Diwali Celebration Images and Videos -->
+  <section class="container my-5">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="images/pramida.jpg" alt="Diwali Image 1" class="card-img-top" style="height: 200px; object-fit: cover;">
+          <div class="card-body text-center">
+            <h5 class="card-title">Diwali Celebration</h5>
+            <p class="card-text">The joyous festival of Diwali brings families and friends together with lights and festivities.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="images/Rangoli.jpeg" alt="Diwali Image 2" class="card-img-top" style="height: 200px; object-fit: cover;">
+          <div class="card-body text-center">
+            <h5 class="card-title">Festival of Lights</h5>
+            <p class="card-text">Lights and fireworks are an essential part of Diwali, illuminating the night sky.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="images/div1.jpg" alt="Diwali Image 3" class="card-img-top" style="height: 200px; object-fit: cover;">
+          <div class="card-body text-center">
+            <h5 class="card-title">Diwali Preparations</h5>
+            <p class="card-text">Diwali is a time for decorations, prayers, and family gatherings.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diwali Celebration Videos Section -->
+  <section class="container my-5 video-section">
+    <div class="row">
+      <div class="col-md-12 video-card">
+        <div class="card">
+          <div class="card-body text-center">
+            <h5 class="card-title">Diwali Celebration Video</h5>
+            <video controls>
+              <source src="images/diwali1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Register Button -->
+  <section class="text-center my-5">
+    <a href="EventRegister.html" class="btn btn-success btn-lg">Register Now</a>
+  </section>
+
+  <!-- Bootstrap JS (optional for functionality) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
